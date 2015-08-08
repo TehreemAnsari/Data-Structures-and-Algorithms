@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="tasks_list">
+<head>
+	<link rel="stylesheet" href="style.css">
+	<!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"> -->
+</head>
+<body>
+
+<div ng-controller="TasksController">
+	<h2>My To-do List</h2>
+	<div id="mainDiv">
+		<p ng-hide="list.length">Add your tasks here!</p>
+		<div id="list" ng-repeat="task in list track by $index">
+			<input type="checkbox" ng-model="task.done"/>
+			<p>{{ task.text }}</p>
+		</div>
+		<form ng-submit="addTask(newTask)">
+			
+			<input type="text" id="taskBox" ng-model="newTask" autofocus/>
+			<input type="submit" value="Add"/>
+			
+		</form>
+		<button ng-click="deleteTask()">Remove completed tasks</button>
+	</div>
+</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
