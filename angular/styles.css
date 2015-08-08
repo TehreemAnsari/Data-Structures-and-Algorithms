@@ -1,0 +1,36 @@
+body
+{
+	font-family: arial;
+	background-color: #A52A2A;
+}
+
+div#mainDiv
+{
+	background-color: #808000;
+	width:50%;
+	margin: 0 auto;
+	text-align: center;
+	padding: 10px;
+}
+
+h2
+{
+	color: #DC143C;
+	text-align: center;
+} 
+
+input[type="checkbox"],div#list p
+{
+	display: inline;
+}
+
+div#list,form
+{
+	margin-bottom: 20px;
+}
+
+div.promptMsg
+{
+	color: blue;
+	margin-bottom: 20px;
+}
